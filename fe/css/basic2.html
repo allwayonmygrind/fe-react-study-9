@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 주석 적용하는 단축키 Ctrl + / or Ctrl + K + c or Alt + Shift + A -->
+    <!-- css 내부 스타일 시트 방식-->
+    <style>
+        /*css를 작성하는 영역*/
+        /*html > head > style css태그를 작성하는 영역*/
+
+        h1 {color: red;} /*H1이라는 태그에 red라는 속성을 부여하겠다.*/
+        h3 {color:orange;}
+        /* h5 {color:green;} */
+
+    </style>
+    <!-- 외부 스타일 시트 방식-->
+    <!-- 외부 css 파일 연결-->
+    <link rel="stylesheet" href="basic.css">
+    <!-- <link rel="stylesheet" href="../html/temp.css"> 처럼 다른 경로에 있는 css 파일연결은 경로를 지정해야한다. -->
+</head>
+<body>
+    <!--body 화면에 표시되는 내용을 작성하는 영역-->
+    <!--각종 html 태그가 작성되는 영역-->
+    
+<h1>css basic</h1>
+
+<!--인라인 스타일 방식>> 내부 스타일 시트 방식보다 우선-->
+<h1 style="color: blue;">css h1 태그</h1> <!-- h1태그에 blue라는 속성을 부여하겠다. -->
+<h1>css h1 태그2</h1>
+
+<h2 style="color:gold;"> 이거는 h2 태그</h2>
+
+<!-- 내부 스타일 시트 vs 외부 스타일 시트 
+    같은 선택자 레벨 + 같은 속성 >> 적용 순서 기준으로 나주옥성이 적용
+-->
+
+<h3>h3 태그</h3>
+<h4>h4 태그</h4>
+<h5>bagic2 h5태그</h5>
+</body>
+</html>
