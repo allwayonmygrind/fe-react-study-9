@@ -8,51 +8,57 @@
     </style>
 </head>
 <body>
-    <pan>사용자 ID : <input type="text">
-    <br>
-    <span>비밀번호 :</span>
-    <input type="password">
-    <button type="submit">완료</button>
-    <br><select>
-        <option value="1">짜장면</option>
-        <option value="2">짬뽕</option>
-        <option value="3">탕수육</option>
-    </select>
-    <br>
-    <label>
-        <span>짜장면</span>
-        <input type="checkbox">
-    </label>
-    <label>
-        <span>짬뽕</span>
-        <input type="checkbox" checked>
-    </label>
-    <label>
-        <span>탕수육</span>
-        <input type="checkbox">
-    </label>
-    <br>
-    <span>이름 :</span> 
-    <input type="text">
-    <br>
-    <span>암호 :</span> 
-    <input type="password">
-    <br>
-    <span>자소서 : </span>
-    <textarea></textarea>
-    <br>
-    <br>
-    <span>검색:</span>
-    <input type="text">
-    <button type="submit">Q1</button>
-    <button type="submit">Q2</button>
-    <br>
-    <span>submit 버튼 : </span>
-    <button type="submit">전송1</button>
-    <button type="submit">전송2</button>
-    <br>
-    <span>reset 버튼 : </span>
-    <button type="reset">리셋1</button>
-    <button type="reset">리셋2</button>
+    
+    <!-- submit이 발생했는지 여부 판단은 naver 경로로 이동하는가 -->
+    <form action="https://naver.com">
+    
+        <span>사용자 ID :</span>
+        <input type="text">
+        <br>
+        <span>비밀번호 :&nbsp;</span>
+        <input type="password">
+        <button type="button">완료</button>
+        <br><br><select>
+            <option>짜장면</option>
+            <option selected>짬뽕</option>
+            <option>탕수육</option>
+        </select>
+        <br>
+        <label>
+            짜장면
+            <input type="checkbox">
+        </label>
+        <label>
+            짬뽕
+            <input type="checkbox" checked>
+        </label>
+        <label>
+            탕수육
+            <input type="checkbox">
+        </label>
+        <br>
+        <span>이름 :</span> 
+        <input type="text">
+        <br>
+        <span>암호 :</span> 
+        <input type="password">
+        <br>
+        <span>자소서 : </span>
+        <textarea>이곳에 자기소개서 작성</textarea>
+        <br>
+        <br>
+        <span>검색:</span>
+        <input type="text">
+        <button type="button">Q1</button>
+        <button type="button">Q2</button>
+        <br>
+        <span>submit 버튼 : </span>
+        <button type="submit">전송1</button>
+        <button type="submit">전송2</button>
+        <br>
+        <span>reset 버튼 : </span>
+        <button type="reset">리셋1</button>
+        <button type="reset">리셋2</button>
+    </form>
 </body>
 </html>
