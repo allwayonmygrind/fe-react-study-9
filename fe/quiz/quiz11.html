@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .mainx {
+            margin: 0 auto;
+            width: 800px;
+            border: 2px solid black;
+            overflow: hidden;
+            /* 내 영역을 벗어난 대상을 숨김 처리 함 */
+        }
+
+        .doublex {
+            display: flex;
+            justify-content: start;
+        }
+
+        .yellowx {
+            background-color: yellow;
+            width: 400px;
+            height: 100px;
+            border: 0.03cm solid black;
+            display: flex;
+
+        }
+
+        .grayx {
+            background-color: gray;
+            width: 400px;
+            height: 100px;
+            border: 0.03cm solid black;
+            display: flex;
+        }
+
+        .purplex {
+            background-color: purple;
+            width: 800px;
+            height: 100px;
+            border: 0.03cm solid black;
+        }
+
+        .triplex {
+            width: 800px;
+            height: 200px;
+            display: flex;
+            
+        }
+
+        .lightg {
+            width: 300px;
+            height: 200px;
+            background-color: lightgray;
+            border: 0.03cm solid black;
+        }
+
+        .yellowex {
+            width: 500px;
+            height: 100px;
+            background-color: yellow;
+            border: 0.03cm solid black;
+        }
+
+        .orangex {
+            width: 500px;
+            height: 100px;
+            background-color: orangered;
+            border: 0.03cm solid black;
+        }
+        .quadrax {
+            width: 800px;
+            height: 100px;
+            display: flex;
+        }
+        .q1,.q3 {
+            width: 200px;
+            height: 100px;
+            background-color: yellow;
+            border: 0.03cm solid black;
+        }
+        .q2 {
+            width: 200px;
+            height: 100px;
+            background-color: orangered;
+            border: 0.03cm solid black;
+        }
+        .q4 {
+            width: 200px;
+            height: 100px;
+            background-color: green;
+            border: 0.03cm solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainx">
+        <div class="doublex">
+            <div class="box yellowx"></div>
+            <div class="grayx"></div>
+        </div>
+        <div class="purplex"></div>
+        <div class="triplex">
+            <div class="lightg"></div>
+            <div class="topdouble">
+                <div class="yellowex"></div>
+                <div class="orangex"></div>
+            </div>
+        </div>
+        <div class="quadrax">
+            <div class="q1"></div>
+            <div class="q2"></div>
+            <div class="q3"></div>
+            <div class="q4"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
