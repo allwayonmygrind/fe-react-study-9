@@ -125,7 +125,7 @@ console.log(Number('134124.123123'));
 
 q = 10;
 if ( q == 10){
-    console.log('q가 10이더라');
+        console.log('q가 10이더라');
 }
 
 q == 10 && console.log('q가 10이더라');
