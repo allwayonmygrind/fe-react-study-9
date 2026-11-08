@@ -57,7 +57,7 @@ console.log(x === z)
         false    true    true
         false    false   false
 
-1       true             false     (true면 false / false면 true   반전됨)
+!       true             false     (true면 false / false면 true   반전됨)
         false            true
 */
 
