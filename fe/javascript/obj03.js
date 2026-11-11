@@ -182,7 +182,7 @@ let newObj = jsonText.parse(jsonText)
 console.log(newObj);
 console.log(newObj,name);
 
-let newObj2 = JSON.parse(JSON.stringify(obj)); // 객체 깊은복사
+let newObj2 = JSON.parse(JSON.stringify(obj)); // 객체 깊은복사  
 
 
 
