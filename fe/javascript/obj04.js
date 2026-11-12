@@ -81,7 +81,7 @@ console.log(result8);
 
 arr = [1, 2, 3, 4, 3, 3, 2, 1, 2];
 
-let result9 = arr.filter((value)=>{
+let result9 = arr.filter((value) => {
     return value == 3; // 3이 아닌 것만 내보내겠다
     // true ? false?
 })
@@ -90,7 +90,7 @@ console.log(result9);
 
 // 3) find
 // return이 true인 요소를 찾는 기능 못찾으면 undefined
-let result10 = arr.find((value)=>{
+let result10 = arr.find((value) => {
     return value == 3;
 });
 
@@ -98,10 +98,65 @@ console.log(result10);
 
 // 4) findIndex find는 값을 찾는다면 얘는 index를 찾는거
 // return이 true인 요소를 찾는 기능 못찾으면 -1
-let result11 = arr.find((value)=>{
+let result11 = arr.find((value) => {
     return value == 3;
 });
 
 console.log(result11);
-if(result11 == -1)
+if (result11 == -1)
     console.log('못찾았다. 그런거 없다');
+
+// 구조분해할당 (Destructuring assignment)
+
+let arr2 = [10, 20, 30];
+console.log(arr2);
+console.log(arr2[2]);
+let [n1, n2, n3] = [77, 88, 99];
+console.log(n1, n2, n3);
+// console.log(n1[1]); 이미 기본 숫자형 데이터인 상태 (배열 x)
+
+let [num, setNum] = [123, 456];
+
+function func1() {
+    console.log('func1() 함수 호출');
+}
+func1();
+
+let [v, f] = [50, func1];
+
+console.log(v);
+f(); //함수
+
+let obj = {
+    num1: 30,
+    num2: 50
+};
+
+
+console.log(obj.num1);
+console.log(obj.num2);
+
+let obj2 = obj;
+console.log(obj2.num1);
+console.log(obj2.num2);
+
+let { num1, num2 } = obj;
+console.log(num1, num2);
+
+//-------------------
+
+let [count, setCount] = uesState(0);
+
+function useState(n) {
+    let v = n;
+
+    function serV(input) { //set 함수
+        v = input;
+    }
+
+    return [v, setV];
+}
+
+console.log(count);
+setcount(10);
+console.log(count);
