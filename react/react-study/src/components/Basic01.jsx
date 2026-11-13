@@ -31,7 +31,8 @@ function Basic01() {
     return ( // if 문 같은 건 return 안에서 사용이 불가함
         <div>
             <h1>React Basic01</h1>
-            <h2 className='font-red'>hello react</h2>
+            <h2 className='font-red'>hello react</h2> 
+            {/* class 대신 className */}
             <h3>안녕하세요</h3>
             <h3>{hello1}</h3>
             <h3>{hello2}</h3>
@@ -49,12 +50,13 @@ function Basic01() {
             {
                 flag == true && <p>{hello1}</p>
             }
+            {/* if 문 대신 flag 사용가능 */}
             {
                 flat == false && <p>flag == false && {hello2}</p>
             }
 
             <h2 style={{color:'blue', fontSize: '26px'}}>{himsg}</h2>
-
+            {/* 기존의 스타일 방식 대신 이러한 방식으로 해야함 */}
 
 
 

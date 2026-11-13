@@ -1,0 +1,15 @@
+.quiz {
+    background-color: black;
+    height: 1000px;
+}
+
+h1 {
+    width: 0 auto;
+    margin-top: 25%;
+    color: aliceblue;
+}
+p {
+    color: aliceblue;
+    margin-top: 10%
+}
+
