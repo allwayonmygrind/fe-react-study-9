@@ -7,7 +7,8 @@ import './App.css'
 // import State01 from './components/State01'
 // import Export01 from './components/Export01'
 // import Product from "./quiz/quiz00/ProductInfo.jsx";
-import Button1 from './quiz/quiz01/Button1.jsx'
+// import Button1 from './quiz/quiz01/Button1.jsx'
+import State02 from './components/State02';
 
 function App() {
 
@@ -16,7 +17,8 @@ function App() {
     // <State01/>
     // <Export01/>
     // <Product/>
-    <Button1/>
+    // <Button1/>
+    <State02/>
   )
 }
 
