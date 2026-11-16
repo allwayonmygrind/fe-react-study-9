@@ -9,6 +9,7 @@ import './App.css'
 // import Product from "./quiz/quiz00/ProductInfo.jsx";
 // import Button1 from './quiz/quiz01/Button1.jsx'
 import State02 from './components/State02';
+import State03 from './components/State03';
 
 function App() {
 
@@ -18,8 +19,9 @@ function App() {
     // <Export01/>
     // <Product/>
     // <Button1/>
-    <State02/>
-  )
+    // <State02/>
+    <State03/>
+  ) 
 }
 
 export default App
