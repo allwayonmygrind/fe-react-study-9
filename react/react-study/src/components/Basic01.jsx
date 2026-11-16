@@ -52,7 +52,7 @@ function Basic01() {
             }
             {/* if 문 대신 flag 사용가능 */}
             {
-                flat == false && <p>flag == false && {hello2}</p>
+                flag == false && <p>flag == false && {hello2}</p>
             }
 
             <h2 style={{color:'blue', fontSize: '26px'}}>{himsg}</h2>
