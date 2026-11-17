@@ -9,7 +9,7 @@ export default function Props01() {
 
     return (
         <>
-        <div>
+        {/* <div>
             {
                 arr.map((value, index) => {
                     return (
@@ -31,7 +31,7 @@ export default function Props01() {
         <Box title={arr[2]} detail = {detail[2]}/>
 
         <hr/>
-        <hr/>
+        <hr/> */}
 
         {
             arr.map((value, index)=>{

@@ -22,7 +22,7 @@ export default function Props02() {
                 let temp = [...titleArr] // ...은 깊은복사
                 temp.push("야식");
                 setTitleArr(temp); // 재렌더링 발생 조건 충족
-
+                
                 let temp2 = [...detailArr];
                 temp2.push("행복하다");
                 setDetailArr(temp2);
@@ -30,6 +30,7 @@ export default function Props02() {
                 console.log(titleArr, detailArr);
 
             }}>야식추가버튼</button>
+            
             {
                 titleArr.map((value, index) => {
                     return (

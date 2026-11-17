@@ -30,6 +30,7 @@ function Box( {title, detail} ){
         <div style={{backgroundColor:'lightgreen', margin:'10px'}}>
             <h1>{title}</h1>
             <h2>{detail}</h2>
+            <hr/>
         </div>
     )
 }
