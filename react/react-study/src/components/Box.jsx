@@ -1,26 +1,38 @@
-// export default function Box(Props) {
-//     // 컴포넌트에서 사용될 매개변수
-//     return (
-//         <div style={{ backgroundColor: 'lightblue' }}>
-//             <h1>{Props.text}</h1>
-//             <h2>{Props.detail}</h2>
-//         </div>
-//     )
-// }
 
+//<Box text={"아침"} detail={"졸리다"} />
+// props = { text:"아침", detail:"졸리다"}
 
+//<Box title={"아침"} detail={"졸리다"} />
+// props = { title:"아침", detail:"졸리다"}
 
-// props = { title : '아침', detail :'졸리다'}
-// let {title, detail} = {title:"아침", detail:"졸리다"}
-
-// let [a, b, c] = [10, 20, 30];
-
-export default function Box(title, detail) {
-    // 컴포넌트에서 사용될 매개변수
+/*
+function Box( props ){
+        // props  : 컴포넌트에서 사용할 매개변수
     return (
-        <div style={{ backgroundColor: 'red' }}>
+        <div style={{backgroundColor:'lightgreen'}}>
+            <h1>{props.title}</h1>
+            <h2>{props.detail}</h2>
+        </div>
+    )
+}
+*/
+
+// props = { title:"아침", detail:"졸리다"}
+// props.title  props.detail
+// let {title, detail} = { title:"아침", detail:"졸리다"}
+// title  detail
+// let [a, b, c] = [10,20,30];
+
+
+function Box( {title, detail} ){
+        // props  : 컴포넌트에서 사용할 매개변수
+    return (
+        <div style={{backgroundColor:'lightgreen', margin:'10px'}}>
             <h1>{title}</h1>
             <h2>{detail}</h2>
         </div>
     )
 }
+
+
+export default Box;
