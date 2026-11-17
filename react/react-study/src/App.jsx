@@ -10,7 +10,8 @@ import './App.css'
 // import Button1 from './quiz/quiz01/Button1.jsx'
 // import State02 from './components/State02';
 // import State03 from './components/State03';
-import Props01 from './components/Props01'
+// import Props01 from './components/Props01'
+import Quiz02 from './quiz/Quiz02/Quiz02'
 
 function App() {
 
@@ -22,8 +23,9 @@ function App() {
     // <Button1/>
     // <State02/>
     // <State03/>
-    <Props01/>
-  ) 
+    // <Props01/>
+    <Quiz02/>
+  )
 }
 
 export default App
