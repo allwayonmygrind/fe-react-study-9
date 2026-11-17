@@ -37,7 +37,7 @@ export default function State03() {
                 // set함수(새로운주소);
                 // let temp = arr; 얕은복사라서 X
 
-                let temp = [...arr]; //깊은복사
+                let temp = [...arr]; //얕은복사
                 temp.push(6);
                 setArr(temp); 
                 //State변수 arr에 값(주소)이 새로운 주소로 변경 -> 재렌더링
