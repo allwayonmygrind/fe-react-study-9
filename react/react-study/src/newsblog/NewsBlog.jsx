@@ -7,6 +7,7 @@ export default function NewsBlog() {
     // 제목 잘 바뀌지 않는 내용
     // 하드코딩(텍스트가 직접 작성되어 있는) or 일반변수 or State변수
     let title = "Blog Header";
+    let [likeCountArr, setLikeCountArr] = useState([0, 0, 0]);
 
     let [news1, setNews1] = useState("어제의 뉴스");
     let [news2, setNews2] = useState("오늘의 뉴스");
@@ -17,6 +18,11 @@ export default function NewsBlog() {
     let [likeCount, setLikeCount] = useState(0);
 
     let [modalFlag, setModalFlag] = useState(false);
+
+    //뉴스를 눌렀을 때 Moadl 창에 전달할 정보를 저장할 변수
+    let [selectedTitle, setSelectedTitle] = useState('');
+    let [selectedLikeCount, setSelectedLikeCount] = useState(0);
+
     return (
 
         <div>
@@ -27,7 +33,7 @@ export default function NewsBlog() {
             </div>
 
 
-            <div className="post-list">
+            {/* <div className="post-list">
                 <h4 onClick={() => {
                     //modalFlag 값 변경
                     // setModalFlag(true);
@@ -59,14 +65,48 @@ export default function NewsBlog() {
             <div className="post-list">
                 <h4>news[2]</h4>
                 <p>내용</p>
-            </div>
+            </div> */}
             {
                 // modalFlag == true ? <Modal /> : null
             }
-
             {
-                modalFlag && <Modal />
+                news.map((item, index) => {
+                    return (
+                        <div className="post-list">
+                            <h4 onClick={() => {
+
+                                setSelectedTitle(item);
+                                setSelectedLikeCount(likeCountArr[index]);
+                                setModalFlag(!modalFlag);
+                            }}>{news[index]} <span onClick={(event) => {
+                                event.stopPropagation();  //이벤트 발생을 추가로 전파/전달 하는 것을 stop!
+                                let temp = [...likeCountArr];
+                                temp[index] += 1;
+                                setLikeCountArr(temp);  //재렌더링 조건 충족
+                            }}>♥</span> {likeCountArr[index]}</h4>
+                            <p>내용</p>
+                        </div>
+                    )
+                })
             }
+
+            <div>
+                <button onClick={() => {
+                    let temp = [...news];
+                    temp[0] = "Today 긴급 속보!!!";
+                    setNews(temp);
+                }}>
+                    긴급제목 변경
+                </button>
+            </div>
+            {
+                modalFlag && <Modal title={selectedTitle} likeCount={selectedLikeCount} 
+                news={news} setNews={setNews} bgColor="lightblue"/>
+            }
+
+
+
+
         </div>
     )
 }

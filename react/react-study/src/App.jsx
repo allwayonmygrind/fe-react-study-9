@@ -14,8 +14,8 @@ import './App.css'
 // import Quiz02 from './quiz/Quiz02/Quiz02'
 // import Props02 from './components/Props02'
 // import Quiz03 from './quiz/Quiz03/Quiz04'
-// import NewsBlog from './newsblog/newsblog'
-import Quiz000 from './newsblog/Quiz000'
+import NewsBlog from './newsblog/NewsBlog'
+// import Quiz000 from './newsblog/Quiz000'
 function App() {
 
   return (
@@ -30,8 +30,8 @@ function App() {
     // <Quiz02/>
     // <Props02/>
     // <Quiz03/>
-    // <NewsBlog/>
-    <Quiz000/>
+    <NewsBlog/>
+    // <Quiz000/>
   )
 }
 
