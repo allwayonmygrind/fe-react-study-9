@@ -1,0 +1,34 @@
+.box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.redd {
+    background-color: red;
+}
+
+.bluee {
+    background-color: blue;
+}
+
+.greenn {
+    background-color: green;
+}
+
+.black {
+    background-color: black;
+}
+
+.mainBox {
+    width: 1000px;
+    height: 1000px;
+
+    border: 12px solid black;
+
+}
+
+.buttTon {
+    
+}
