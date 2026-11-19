@@ -2,14 +2,14 @@ import { useState } from "react"
 import "./Quiz05.css"
 
 export default function Quiz05() {
-    
+
     let [frontBoxes, setFrontBoxes] = useState([]);
-    
+
     let [backBoxes, setBackBoxes] = useState([]);
 
-    
+
     let posit = ["앞", "뒤"];
-    
+
     let colorss = [
         { name: "빨간", calssName: "redd" },
         { name: "파란", calssName: "bluee" },

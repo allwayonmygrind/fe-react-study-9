@@ -17,7 +17,8 @@ import './App.css'
 // import NewsBlog from './newsblog/NewsBlog'
 // import Quiz000 from './newsblog/Quiz000'
 // import Quiz04 from './quiz/Quiz04/Quiz04'
-import Quiz05 from './quiz/Quiz05/Quiz05'
+// import Quiz05 from './quiz/Quiz05/Quiz05'
+import Quiz06 from './quiz/Quiz06/Quiz06'
 
 function App() {
 
@@ -36,7 +37,8 @@ function App() {
     // <NewsBlog/>
     // <Quiz000/>
     // <Quiz04/>
-    <Quiz05/>
+    // <Quiz05/>
+    <Quiz06/>
   )
 }
 
