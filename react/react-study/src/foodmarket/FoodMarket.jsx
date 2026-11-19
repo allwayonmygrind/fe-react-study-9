@@ -1,8 +1,10 @@
 import './FoodMarket.css'
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
+import foodsData from './data/foodsData';
+import { useState } from 'react';
+import FoodCard from './components/FoodCard';
 
-import { Container, Nav, Navbar, Row, Col, Spinner, Button, Card} from 'react-bootstrap';
+
+import { Dropdown, DropdownButton, Container, Nav, Navbar, Row, Col, Spinner, Button, Card } from 'react-bootstrap';
 
 import banner_bg from "./img/banner_bg.jpg";
 import food1 from './img/food1.jpg';
@@ -11,6 +13,10 @@ import food3 from './img/food3.jpg';
 
 
 export default function FoodMarket() {
+
+    let [foods, setFoods] = useState(foodsData);
+
+
     return (
 
         <div>
@@ -32,19 +38,39 @@ export default function FoodMarket() {
 
             <div className="main-bg"></div>
 
-            {/* bootstrap 한줄 기준 : 12 */}
             <Container>
+                <Row>
+                    {
+                        foods.map((food, index) => {
+                            return (
+                                <Col md={4} sm={4} xxl={3}>
+                                    <FoodCard/>
+                                </Col>
+                            )
+                        })
+                    }
+                </Row>
+            </Container>
+
+
+
+            {/* bootstrap 한줄 기준 : 12 */}
+            {/* <Container>
                 <Row>
                     <Col md={4} sm={4} xxl={3}>
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={food1} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>
+                                    {foods[0].title}
+                                </Card.Title>
+                                <Card.Title>
+                                    {foods[0].content}
+                                </Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                    {foods[0].price}
                                 </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
+                                <Button variant="primary">상세보기</Button>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -52,12 +78,18 @@ export default function FoodMarket() {
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={food2} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>
+                                    {foods[1].title}
+                                </Card.Title>
+                                <Card.Title>
+                                    {foods[1].content}
+                                </Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                    {foods[1].price}
                                 </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
+                                <Button variant="primary">
+                                    상세보기
+                                </Button>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -65,17 +97,21 @@ export default function FoodMarket() {
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={food3} />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>
+                                    {foods[2].title}
+                                </Card.Title>
+                                <Card.Title>
+                                    {foods[2].content}
+                                </Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                    {foods[2].price}
                                 </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
+                                <Button variant="primary">상세보기</Button>
                             </Card.Body>
                         </Card>
                     </Col>
                 </Row>
-            </Container>
+            </Container> */}
 
 
 
