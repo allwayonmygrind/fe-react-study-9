@@ -21,6 +21,9 @@ export default function Quiz06() {
     // input 요소에서 입력된 값을 저장하는 용도
     let [inputText, setInputText] = useState('');
 
+
+
+
     return (
         <div>
             <div className="black-nav">
@@ -51,10 +54,26 @@ export default function Quiz06() {
                                     let temp = [...likeCountArr];
                                     temp[index] += 1;
                                     setLikeCountArr(temp);  //재렌더링 조건 충족
-                                }}> ♥</span>
+                                }}>❤️</span>
 
                                 {likeCountArr[index]}</h4>
-                            <p>내용</p>
+                            <p>내용 무</p>
+
+                            <button
+                                onClick={() => {
+
+                                    let temp = [...news];
+                                    temp.splice(index, 1);
+                                    setNews(temp);
+
+                                    let temp2 = [...likeCountArr];
+                                    temp2.splice(index, 1);
+                                    setLikeCountArr(temp2);
+                                    
+                                }}>
+                                삭제
+                            </button>
+
                         </div>
                     )
                 })
