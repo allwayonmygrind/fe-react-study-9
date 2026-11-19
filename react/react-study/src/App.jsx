@@ -3,6 +3,7 @@ import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+import FoodMarket from './foodmarket/FoodMarket'
 // import './components/Basic01'
 // import State01 from './components/State01'
 // import Export01 from './components/Export01'
@@ -18,7 +19,8 @@ import './App.css'
 // import Quiz000 from './newsblog/Quiz000'
 // import Quiz04 from './quiz/Quiz04/Quiz04'
 // import Quiz05 from './quiz/Quiz05/Quiz05'
-import Quiz06 from './quiz/Quiz06/Quiz06'
+// import Quiz06 from './quiz/Quiz06/Quiz06'
+import FoodMarket from './foodmarket/FoodMarket'
 
 function App() {
 
@@ -38,7 +40,8 @@ function App() {
     // <Quiz000/>
     // <Quiz04/>
     // <Quiz05/>
-    <Quiz06/>
+    // <Quiz06/>
+    <FoodMarket/>
   )
 }
 
