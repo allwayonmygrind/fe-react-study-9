@@ -19,8 +19,8 @@ import './App.css'
 // import Quiz04 from './quiz/Quiz04/Quiz04'
 // import Quiz05 from './quiz/Quiz05/Quiz05'
 // import Quiz06 from './quiz/Quiz06/Quiz06'
-// import FoodMarket from './foodmarket/FoodMarket'
-import Quiz07 from './quiz/Quiz07/Quiz07'
+import FoodMarket from './foodmarket/FoodMarket'
+// import Quiz07 from './quiz/Quiz07/Quiz07'
 
 function App() {
 
@@ -41,8 +41,8 @@ function App() {
     // <Quiz04/>
     // <Quiz05/>
     // <Quiz06/>
-    // <FoodMarket/>
-    <Quiz07/>
+    <FoodMarket/>
+    // <Quiz07/>
   )
 }
 
