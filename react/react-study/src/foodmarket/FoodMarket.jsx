@@ -12,6 +12,8 @@ import food2 from './img/food2.jpg';
 import food3 from './img/food3.jpg';
 import CustomerService from './pages/CustomerService';
 import Home from "./pages/Home";
+import Detail from "./pages/Detail";
+
 
 
 export default function FoodMarket() {
@@ -52,6 +54,7 @@ export default function FoodMarket() {
             <Routes>
                 <Route path="/" element={<Home foods={foods} />} />
                 <Route path="/help" element={<CustomerService />} />
+                <Route path="/detail/:id" element={<Detail foods={foods}/>} />
                 <Route path="/detail" element={<div><h1>Detail Page</h1></div>} />
                 <Route path="/info" element={<div><h1>Info 페이지</h1></div>} />
                 <Route path="/test" element={<div><h1>이곳은 테스트</h1></div>} />
