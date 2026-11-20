@@ -44,7 +44,7 @@ export default function FoodMarket() {
                         foods.map((food, index) => {
                             return (
                                 <Col md={4} sm={4} xxl={3}>
-                                    <FoodCard/>
+                                    <FoodCard food={food}/>
                                 </Col>
                             )
                         })
