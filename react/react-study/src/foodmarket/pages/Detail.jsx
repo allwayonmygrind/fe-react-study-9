@@ -1,8 +1,61 @@
 import { useParams, useNavigate } from "react-router";
 import { Container, Row, Col, Button } from 'react-bootstrap';
+import { useState, useEffect } from "react";
+
+export default function Detail({ foods }) {
 
 
-export default function Detail({foods}) {
+    /* 
+    
+    useEffect 훅 (Hooks)
+
+    useEffect(실행할 함수, 의존성배열)
+
+    useEffect(실행할 함수, []) 빈 배열 -> 생성시에만 실행
+    useEffect(실행할 함수, []) 모든 로딩딜 때 실행 (생성,update)
+    useEffect(생성할 함수, [count]) -> count 값이 바뀔 때 마다 실행
+    useEffect(생성할 함수, [a, b, c) -> a,b,c 값이 셋 중 하나라도 바뀔시 실행
+
+    
+    useEffect(실행할 함수(){
+        return ()=>{clean up function} //unmount시 실행할 함수
+    }
+    , 의존성배열)
+    
+    
+    */
+
+    let [orderCount, setOrderCount] = useState(0);
+    let [test, setTest] = useState(0);
+
+    useEffect(() => {
+        console.log("useEffect 함수 실행. (의존성 배열 없음)");
+        //의존성배열 X -> 매번 실행
+    })
+
+    useEffect(() => {
+        console.log("useEffect 함수 실행. [] 빈 의존성 배열 의존")
+    }, []) //빈배열 -> 생성/로딩시 1회 실행
+
+    useEffect(() => {
+        console.log("useEffect 함수 실행. [orderCount] : " + orderCount);
+
+    }, [orderCount]) // 의존성배열에 있는 orderCount 값 -> 참고
+    
+    
+    useEffect(() => {
+        console.log("useEffect 함수 실행. [test] : " + test);
+
+    }, [test]) // 의존성배열에 있는 orderCount 값 -> 참고
+
+    useEffect(() => {
+        console.log("useEffect 함수 실행. [test, orderCount] : ");
+        
+    }, [test, orderCount]) // 의존성배열에 있는 orderCount 값 -> 참고
+
+
+    // -------------------------
+
     //상세보기를 눌렀을 떄
     //특정 상품의 상세정보를 보여주는 페이지
 
@@ -43,12 +96,12 @@ export default function Detail({foods}) {
     let navigate = useNavigate();
 
     // 해당 id 상품을 찾지 못했을 경우 필터링
-    if(food == undefined || food == null){
-        return(
+    if (food == undefined || food == null) {
+        return (
             <div>
                 <h1>존재하지 않는 상품입니다.</h1>
                 <h2>잘못된 접근입니다.</h2>
-                <button variant='info' onClick={()=>{
+                <button variant='info' onClick={() => {
                     navigate("/");
                 }}>홈으로 돌아가기</button>
             </div>
@@ -67,9 +120,16 @@ export default function Detail({foods}) {
                     <p>{food.price}</p>
 
                     <div>
-                        <Button variant="dark">-</Button>
-                        <span> 0 </span>
-                        <Button variant="dark">+</Button>
+                        <Button variant="dark" onClick={() => {
+                            setOrderCount(orderCount + 1);
+                        }}>-</Button>
+                        <span> {orderCount} </span>
+                        <Button variant="dark" onClick={() => {
+                            setOrderCount(orderCount + 1);
+                            console.log('onClick() 함수에서 출력 : ' + orderCount)
+                        }}>+</Button>
+
+                        {/* <button onClick={()=>{setTest(test+1);}}>test 값 증가</button> */}
                     </div>
 
                     <Button variant="primary">주문하기</Button>
