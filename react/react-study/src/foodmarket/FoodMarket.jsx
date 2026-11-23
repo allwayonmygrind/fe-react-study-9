@@ -45,7 +45,7 @@ export default function FoodMarket() {
                         <Nav.Link onClick={()=>{navigate("/detail")}}>FoodDetail</Nav.Link>
                         <Nav.Link onClick={()=>{navigate("/info")}}>Info</Nav.Link>
                         <Nav.Link onClick={()=>{navigate("/help")}}>고객센터</Nav.Link>
-                        <Nav.Link href="/help">고객센터</Nav.Link>
+                        {/* <Nav.Link href="/help">고객센터</Nav.Link> */}
                     </Nav>
                 </Container>
             </Navbar>
