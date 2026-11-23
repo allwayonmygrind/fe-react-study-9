@@ -2,6 +2,7 @@ import { useParams, useNavigate } from "react-router";
 import { Container, Row, Col, Button, Modal } from 'react-bootstrap';
 import { useState, useEffect } from "react";
 import "./Detail.css";
+import foodsData from "../data/foodsData";
 
 export default function Detail({ foods }) {
 
@@ -168,18 +169,36 @@ export default function Detail({ foods }) {
 
                     <div>
                         <Button variant="dark" onClick={() => {
-                            setOrderCount(orderCount + 1);
+                            if (orderCount > 0) {
+                                setOrderCount(orderCount - 1);
+                            } else {
+                                alert("품절입니다.")
+                            }
                         }}>-</Button>
+
                         <span> {orderCount} </span>
+
                         <Button variant="dark" onClick={() => {
-                            setOrderCount(orderCount + 1);
-                            console.log('onClick() 함수에서 출력 : ' + orderCount)
+
+                            if (food.stockCount <= 0) {
+                                alert("품절입니다");
+                            } else if (orderCount < food.stockCount) {
+                                setOrderCount(orderCount + 1);
+                            } else {
+                                alert("최대입니다")
+                            }
+
                         }}>+</Button>
 
                         {/* <button onClick={()=>{setTest(test+1);}}>test 값 증가</button> */}
                     </div>
+                    {
+                        food.stockCount == 0 ?
+                            <Button variant="secondary" disabled="true">품절</Button>
+                            :
+                            <Button variant="primary">주문하기</Button>
+                    }
 
-                    <Button variant="primary">주문하기</Button>
                 </Col>
             </Row>
 
