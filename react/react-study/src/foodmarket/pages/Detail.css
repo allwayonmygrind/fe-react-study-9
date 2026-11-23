@@ -7,3 +7,16 @@
 .end {
     opacity: 1;
 }
+
+.price-red {
+    color: red;
+}
+
+.price-blue {
+    color: blue;
+}
+
+.text-strong {
+    font-weight: blod;
+    text-decoration: underline;
+}

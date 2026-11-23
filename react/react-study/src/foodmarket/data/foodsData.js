@@ -37,8 +37,8 @@ let foodsData = [
     },
     {
         id: "fd005",
-        title: "이름 모를 음식",
-        content: "보긴 많이 봤는데",
+        title: "펜네 파스타",
+        content: "고소함과 식감이 좋음",
         price: 13000,
         imgPath: "images/food5.jpg",
         stockCount: 3
